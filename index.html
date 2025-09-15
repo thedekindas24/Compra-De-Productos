@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Emporium - Online Toy Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Juguetes</h1>
+        <p>¡Tu tienda única para la diversión!</p>
+    </header>
+
+    <main class="container">
+        <section id="product-listing">
+            <h2>Nuestros increíbles juguetes</h2>
+            <div class="product-grid">
+                
+            </div>
+        </section>
+
+        <aside id="shopping-cart-section">
+            <h2>Su carrito de compras</h2>
+            <div id="cart-items-container">
+                
+                <p id="empty-cart-message">Su carrito está vacío.</p>
+            </div>
+            <div id="cart-summary">
+                <p>Total: <span id="cart-total-price">$0.00</span></p>
+                <button id="checkout-button" class="action-button" disabled>Proceed to Checkout</button>
+            </div>
+        </aside>
+
+        <section id="checkout-form-section" style="display:none;">
+            <h2>Detalles de pago</h2>
+            <form id="purchase-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electronico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección de envío:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Número de tarjeta de crédito o débito:</label>
+                    <input type="text" id="card-number" name="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Fecha de vencimiento (MM/YY):</label>
+                    <input type="text" id="expiry-date" name="expiryDate" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="back-to-cart-button" class="secondary-button">Volver al carrito</button>
+                    <button type="submit" id="confirm-purchase-button" class="action-button">Confirmar compra</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="confirmation-message-section" style="display:none;">
+            <h2>¡Gracias!</h2>
+            <p>¡Su pedido ha sido realizado exitosamente!</p>
+            <p>Se ha "enviado" una confirmación a su correo electrónico.</p>
+            <button id="shop-again-button" class="action-button">Comprar de nuevo</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Juguetes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
